@@ -47,6 +47,7 @@ async function init() {
   const metadataURL = URL + 'metadata.json';
   // load the model and metadata
   model = await tmImage.load(modelURL, metadataURL);
+  console.log("model loaded");
   maxPredictions = model.getTotalClasses();
   labelContainer = document.getElementById('label-container');
   for (let i = 0; i < maxPredictions; i++) {
